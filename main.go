@@ -35,6 +35,18 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println(dictionary)
+	fmt.Println()
 
+	err = dictionary.Update("hello", "Second")
+	if err != nil {
+		fmt.Println(err)
+	}
+	word, _ := dictionary.Search("hello")
+	fmt.Println(word)
+	fmt.Println(dictionary)
+	fmt.Println()
+
+	dictionary.Delete("hello")
 	fmt.Println(dictionary)
 }
